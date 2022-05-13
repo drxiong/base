@@ -1,0 +1,33 @@
+{
+  "name": "base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drxiong/base.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drxiong/base/issues"
+  },
+  "homepage": "https://github.com/drxiong/base#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/plugin-transform-runtime": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "babel-loader": "^8.2.5",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "webpack-dev-server": "^4.9.0"
+  }
+}
