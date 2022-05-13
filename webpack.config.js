@@ -1,12 +1,13 @@
 const path = require("path")
 const htmlWebpackPlugin = require("html-webpack-plugin")
+const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 
 module.exports = {
   mode: "development",
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: "index_bundle.js"
+    filename: "[name]-[contenthash:8].js"
   },
   module: {
     rules: [
@@ -17,7 +18,8 @@ module.exports = {
     ]
   },
   plugins: [
-    new htmlWebpackPlugin()
+    new htmlWebpackPlugin(),
+    new CleanWebpackPlugin()
   ],
   devServer: {
     // 当使用 [HTML5 History API] 时，任意的 `404` 响应被替代为 `index.html`
@@ -29,6 +31,6 @@ module.exports = {
     // 是否开启代码压缩
     compress: true,
     // 启动的端口
-    port: 9000
+    port: 7777
   }
 }
